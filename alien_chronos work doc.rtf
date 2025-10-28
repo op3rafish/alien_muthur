@@ -1,0 +1,146 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fmodern\fcharset0 CourierNewPSMT;\f2\froman\fcharset0 Times-Roman;
+\f3\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red253\green149\blue70;\red12\green14\blue18;
+\red252\green99\blue95;\red224\green232\blue240;\red104\green177\blue255;\red198\green146\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c65098\c34118;\cssrgb\c5098\c6667\c9020;
+\cssrgb\c100000\c48235\c44706;\cssrgb\c90196\c92941\c95294;\cssrgb\c47451\c75294\c100000;\cssrgb\c82353\c65882\c100000;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10880\viewh19940\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs40 \cf0 ALIEN: CHRONOS\
+
+\f1 \
+# AIM\
+Create a text-based Alien game where the player interacts with the MUTHER computer.\
+\
+\
+# ARCHITECTURE\
+aliengame/\
+\uc0\u9500 \u9472 \u9472  main.py (launcher)\
+\uc0\u9500 \u9472 \u9472  engine.py (shared utilities)\
+\uc0\u9500 \u9472 \u9472  scenes/\
+\uc0\u9474    \u9500 \u9472 \u9472  opening.py\
+\uc0\u9474    \u9500 \u9472 \u9472  maze.py\
+\uc0\u9474    \u9500 \u9472 \u9472  encounter.py\
+\uc0\u9474    \u9492 \u9472 \u9472  finale.py\
+\uc0\u9492 \u9472 \u9472  config.py (constants, fonts, colors)\
+\
+\
+Main: The main game logic\
+\
+Engine: Effects and utilities across the game (e.g. typing effect, green flash etc.)\
+\
+Config: Constants (e.g. colours, fonts)\
+\
+\
+\
+\
+# STORYLINE/NARRATIVE\
+Intro / entering name\
+\
+Scene setting with MUTHER: establish the threat, stakes and the tone. \
+\
+Start timer. 5mins?\
+\
+Maze to bring re-route power, data and coolant systems online (they were damaged during the xenomorph coming onboard).\
+\
+Navigation puzzle to re-route the ship to emergency Weyland-Yutami base\
+\
+Twist at the end: the special order is that the records accessed at the beginning mean you are a perfect match for alien incubation and so the ship will become your tomb as you bdcome the vessel for the alien life form as it\'92s transported to a W-Y base for study.\
+\
+MUTHER was never helping you, only preserving you for W-Y. Corporate greed and ruthlessness displayed on the screen in cold black and green.\
+\
+MUTHER offline. \
+\
+\
+\
+\
+# EDITS\
+You can now edit line-by-line pauses for dramatic effect!\
+\
+\
+# TO DO \
+Figure out how to add text sequences/sections properly \
+\
+Add timer to the opening to begin the countdown\
+\
+Establish and confirm testing environment\
+\
+Finish the other puzzle sequences etc before adding timer\
+\
+Add success diaogue after maze\
+\
+Create navigation logic game mechanic\
+\
+Victory dialogue sequence\
+\
+Game over dialogue sequence\
+\
+\
+# TESTING\
+Create a test file where sections of code can be tested in isolation.\
+\
+\
+# NAVIGATION PUZZLE\
+Test the player\'92s logic by filling in the missing gaps in the navigation sequences.\
+\
+Can be mathematical or shape sequences. \
+\
+What do the lines/patterns represent?\
+Navigation chart data?\
+Coordinates for hyperspace travel / trajectory plotting\
+The precise entry/exit points required\
+Star maps\
+\
+Complete the pattern logic game. \
+Numbers or shapes? Or both?\
+3 patterns of numbers\
+3 arrow direction patterns\
+\
+7-10-5.21-24-19.?.36.?.\
+4-5-45.3-3-36.2-9-99.1\'96?-56\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs24 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\uc0\u9650  \u9654  \u9654  \u9650  ? \u9654  \u9650 
+\f1\fs40 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 ^>>^>?^\
+^^..^^>^^?.^?>\
+\
+o O . ! * \
+\
+\
+# ADDING/EDITING DIALOGUE\
+Write the script in dialogue.py\
+\
+Make text appear as a whole new screen\
+\
+Custom pauses between lines (make it look like processing etc.)\
+\
+Change opening to narrative\'85whole narrative flow in one file; multiple feels unecessary\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs30 \cf3 \cb4 \expnd0\expndtw0\kerning0
+line_pauses\cf5 =\cf6 \{\cf7 1\cf6 : \cf7 2\cf6 \}
+\f1\fs40 \cf0 \cb1 \kerning1\expnd0\expndtw0 \
+A dictionary in which key=line and value=how many seconds to pause (dramatically)\
+\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f3\fs30 \cf8 \cb4 \expnd0\expndtw0\kerning0
+wait_for_time\cf6 (\cf7 2\cf6 , \cf3 screen\cf6 , texts)\cb1 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs40 \cf0 \kerning1\expnd0\expndtw0 How long to pause at the end of that screen section\
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+}
