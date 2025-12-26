@@ -30,8 +30,6 @@ def main():
 
     run_maze_completion(screen, player_name)
 
-    # TESTING SOMETHING ELSE!
-
 
     # Launch puzzle 2: logic game
 
