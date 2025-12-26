@@ -182,3 +182,35 @@ def run_opening(screen):
     wait_for_time(2, screen, texts)
     
     return player_name
+
+
+# MAZE GAME RUNS
+
+# Maze completion dialogue
+def run_maze_completion(screen, player_name):
+    font_large, _, _ = load_fonts()
+    TOP_POSITION = 100
+
+    # Part 1
+    part1_lines = [line.format(player_name=player_name) for line in MAZE_DIALOGUE["maze_completion_1"]]
+    screen.fill(TERMINAL_BLACK)
+    texts1 = display_typing_sequence(
+        [(line, font_large) for line in part1_lines],
+        screen,
+        TOP_POSITION,
+        40
+    )
+    wait_for_time(3, screen, texts1)
+    green_flash(screen)
+
+    # New screen for the warning
+    screen.fill(TERMINAL_BLACK)
+    part2_lines = [line.format(player_name=player_name) for line in MAZE_DIALOGUE["maze_completion_2"]]
+    texts2 = display_typing_sequence(
+        [(line, font_large) for line in part2_lines],
+        screen,
+        TOP_POSITION,
+        40
+    )
+    wait_for_time(4, screen, texts2)
+    green_flash(screen)

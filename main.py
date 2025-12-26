@@ -5,7 +5,7 @@ ALIEN: CHRONOS - Main launcher
 import pygame
 from config import WIDTH, HEIGHT
 from scenes.title import run_title_sequence
-from scenes.narrative import run_opening
+from scenes.narrative import run_opening, run_maze_completion
 from scenes.maze import run_maze_game
 
 def main():
@@ -27,6 +27,8 @@ def main():
 
     # Launch puzzle 1: maze game
     run_maze_game(player_name)
+
+    run_maze_completion(screen, player_name)
 
     # Launch puzzle 2: logic game
 

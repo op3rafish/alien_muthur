@@ -119,6 +119,7 @@ def run_maze_game(player_name):
     current_line = 'power'
     game_won = False
     blink_counter = 0
+    win_timer = 0
     
     def reset_game():
         """Reset all system paths to starting positions"""
@@ -249,9 +250,6 @@ def run_maze_game(player_name):
             text = font.render("ROUTING COMPLETE", True, BRIGHT_GREEN)
             screen.blit(text, text.get_rect(center=(WIDTH // 2, 40)))
             
-            small_font = pygame.font.Font(None, 18)
-            restart_text = small_font.render("Press R to restart", True, DIM_GREEN)
-            screen.blit(restart_text, restart_text.get_rect(center=(WIDTH // 2, 70)))
         else:
             # Current system indicator
             font = pygame.font.Font(None, 24)
@@ -310,7 +308,17 @@ def run_maze_game(player_name):
                             lines[current_line]['connected'] = False
         
         # Check win condition
-        game_won = all(lines[system]['connected'] for system in lines)
+        # game_won = all(lines[system]['connected'] for system in lines)
+        
+        # Check win condition: Updated to auto exit
+        if not game_won and all(lines[system]['connected'] for system in lines):
+            game_won = True
+            win_timer = pygame.time.get_ticks() + 3000  # Show win message for 3 seconds
+
+        # Auto-exit after win message display
+        if game_won and pygame.time.get_ticks() > win_timer:
+            running = False  # This exits the loop and returns to main.py
+
         
         # Render frame
         screen.fill(TERMINAL_BLACK)
@@ -325,5 +333,3 @@ def run_maze_game(player_name):
         
         pygame.display.flip()
         clock.tick(60)
-    
-    pygame.quit()

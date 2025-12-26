@@ -65,8 +65,20 @@ MAZE_DIALOGUE = {
         "You must manually re-route power, coolant and data systems",
         "Establishing interface..."
         ""
+    ],
+    "maze_completion_1": [
+        "SYSTEMS RE-ROUTED SUCCESSFULLY",
+        "Power...Online",
+        "Coolant...Online",
+        "Data...Online"
+        ""
+    ],
+    "maze_completion_2": [
+        "WARNING: Unidentified life-form movement detected",
+        "Proceed with extreme caution, Officer {player_name}",
+        " "
     ]
-
+    
     }
     
 #     "final_message": [
