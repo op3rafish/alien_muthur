@@ -38,7 +38,7 @@ OPENING_DIALOGUE = {
         "WARNING: UNIDENTIFIED LIFE-FORM ON-BOARD",
         "Scanning...",
         "",
-        "THREAD LEVEL: CRITICAL",
+        "THREAT LEVEL: CRITICAL",
         "",
         "*** EMERGENCY QUARANTINE PROTOCOL ACTIVATED ***",
         "Locking down ship",
@@ -76,11 +76,28 @@ MAZE_DIALOGUE = {
     "maze_completion_2": [
         "WARNING: Unidentified life-form movement detected",
         "Proceed with extreme caution, Officer {player_name}",
+
         " "
     ]
-    
     }
     
+NAVIGATION_DIALOGUE = {
+"navigation_intro": [
+    "Estimated time until contact: 5 minutes.",
+    "You must manually re-route power, coolant and data systems",
+    "Establishing interface..."
+    ""
+],
+"navigation_completion_1": [
+    "SYSTEMS RE-ROUTED SUCCESSFULLY",
+    "Power...Online",
+    "Coolant...Online",
+    "Data...Online"
+    ""
+],
+
+}
+
 #     "final_message": [
 #         "Manual routing required",
 #         "Initializing MUTHER routing interface..."
