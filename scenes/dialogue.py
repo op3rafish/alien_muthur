@@ -78,9 +78,22 @@ MAZE_DIALOGUE = {
         "Proceed with extreme caution, Officer {player_name}",
         " "
     ]
-    
     }
-    
+
+NAVIGATION_DIALOGUE = {
+    "nav_dialogue_1": [
+        "Here is dialogue explaining the navigation",
+        "",
+        "",
+        ""
+    ],
+    "nav_dialogue_2": [
+        "Here is more dialogue explaining the navigation",
+        "Star map co-ordinates and stuff",
+        "",
+        ""
+    ]
+    }
 #     "final_message": [
 #         "Manual routing required",
 #         "Initializing MUTHER routing interface..."
