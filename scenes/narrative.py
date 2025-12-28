@@ -11,7 +11,7 @@ import sys
 import time
 from config import WIDTH, HEIGHT, TERMINAL_GREEN, BRIGHT_GREEN, TERMINAL_BLACK, load_fonts
 from engine import TypingText, apply_crt_effects, green_flash, wait_for_time, display_typing_sequence
-from scenes.dialogue import OPENING_DIALOGUE, MAZE_DIALOGUE, NAVIGATION_DIALOGUE
+from scenes.dialogue import OPENING_DIALOGUE, MAZE_DIALOGUE
 
 
 def get_player_name(screen, y_position=100):
