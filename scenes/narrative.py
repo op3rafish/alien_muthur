@@ -214,3 +214,5 @@ def run_maze_completion(screen, player_name):
     )
     wait_for_time(4, screen, texts2)
     green_flash(screen)
+
+    # Navigation game intro dialogue
