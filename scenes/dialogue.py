@@ -61,7 +61,7 @@ OPENING_DIALOGUE = {
 
 MAZE_DIALOGUE = {
     "timer_mazeintro": [
-        "Estimated time until contact: 5 minutes.",
+        "Crew member X...terminated.",
         "You must manually re-route power, coolant and data systems",
         "Establishing interface..."
         ""
@@ -75,23 +75,28 @@ MAZE_DIALOGUE = {
     ],
     "maze_completion_2": [
         "WARNING: Unidentified life-form movement detected",
-        "Proceed with extreme caution, Officer {player_name}",
-        " "
+        " ",
+        "Crew member Y...terminated."
+        "Crew member Z...terminated."
+        "Crew member A...terminated."
+        "Officer {player_name} is now the only remaining member of the USS Chronos. Survival is top priority."
     ]
     }
 
 NAVIGATION_DIALOGUE = {
     "nav_dialogue_1": [
-        "Here is dialogue explaining the navigation",
-        "",
+        "Re-routing ship to emergency co-ordinates, stand by.",
+        "Calculating...",
         "",
         ""
     ],
     "nav_dialogue_2": [
-        "Here is more dialogue explaining the navigation",
-        "Star map co-ordinates and stuff",
+        "New destination: LV-642, Cassandra System, Frontier Zone.",
+        "Inputting star map co-ordinates now...",
         "",
+        "New course: Confirmed.",
         ""
+
     ]
     }
 #     "final_message": [
