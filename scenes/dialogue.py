@@ -61,7 +61,7 @@ OPENING_DIALOGUE = {
 
 MAZE_DIALOGUE = {
     "timer_mazeintro": [
-        "Crew member X...terminated.",
+        "Crew member Jones...terminated.",
         "You must manually re-route power, coolant and data systems",
         "Establishing interface..."
         ""
@@ -78,8 +78,42 @@ MAZE_DIALOGUE = {
         "Proceed with extreme caution, Officer {player_name}",
         " "
     ]
-    
     }
+
+AIRLOCK_DIALOGUE = {
+    "airlock_intro": [
+        "WARNING: Unidentified life-form approaching bridge",
+        "",
+        "MANUAL OVERRIDE INITIATED",
+        "Objective: Lure target to cargo bay."
+        "Airlock can only be opened once cargo bay is sealed.",
+        "Method: Manual bulkhead control",
+        "",
+        "Accessing MUTHER airlock protocol interface..."
+    ],
+    
+    "airlock_victory": [
+        "AIRLOCK OPENED",
+        "DECOMPRESSION COMPLETE",
+        "",
+        "Target: eliminated",
+        "Hull integrity restored",
+        "",
+        "Mission successful, Officer {player_name}",
+        ""
+    ],
+    
+    "airlock_failure": [
+        "LIFE SIGNS NEGATIVE",
+        "Officer {player_name}...Terminated",
+        "",
+        "Special Order 937...Failed",
+        "",
+        "Mission parameters not met",
+        "USCSS Chronos...Lost",
+        ""
+    ]
+}
     
 #     "final_message": [
 #         "Manual routing required",

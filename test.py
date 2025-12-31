@@ -1,8 +1,5 @@
-
-
 """
 Test environment for ALIEN: CHRONOS
-
 """
 
 import pygame
@@ -13,18 +10,22 @@ from engine import TypingText, apply_crt_effects, green_flash, wait_for_time, di
 from scenes.dialogue import OPENING_DIALOGUE, MAZE_DIALOGUE
 
 from scenes.maze import run_maze_game
-from scenes.narrative import run_maze_completion
-
+from scenes.narrative import run_maze_completion, run_airlock_ending
 from scenes.airlock import run_airlock_puzzle
 
 def main():
     pygame.init()
     screen = pygame.display.set_mode((WIDTH, HEIGHT))
-    pygame.display.set_caption("Test - Airlock Puzzle")
+    pygame.display.set_caption("Test - Airlock Puzzle + Endings")
 
     player_name = "Lambert"
-    run_airlock_puzzle(player_name)
-
+    
+    # Run the airlock puzzle
+    outcome = run_airlock_puzzle(player_name)
+    
+    # Display the appropriate ending
+    run_airlock_ending(screen, player_name, outcome)
+    
     pygame.quit()
 
 if __name__ == "__main__":

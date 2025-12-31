@@ -382,6 +382,7 @@ def draw_corridor(surface, x1, y1, x2, y2, width=35):
         pygame.draw.line(surface, TERMINAL_GREEN, (x - width//2, y1), (x - width//2, y2), 2)
         pygame.draw.line(surface, TERMINAL_GREEN, (x + width//2, y1), (x + width//2, y2), 2)
 
+
 def run_airlock_puzzle(player_name):
     pygame.init()
     screen = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -561,14 +562,15 @@ def run_airlock_puzzle(player_name):
                         if target == 'AIRLOCK':
                             if not cargo_sealed:
                                 error_message = "CARGO BAY NOT SEALED"
+                                message_timer = pygame.time.get_ticks() + 2000
                             elif alien.current_node.name != 'cargo':
                                 error_message = "TARGET NOT IN CARGO BAY"
+                                message_timer = pygame.time.get_ticks() + 2000
                             else:
                                 game_won = True
-                                win_timer = pygame.time.get_ticks() + 3000
+                                win_timer = pygame.time.get_ticks() + 2000
                                 command_history.append("AIRLOCK OPENING...")
                                 command_history.append("DECOMPRESSION INITIATED")
-                            message_timer = pygame.time.get_ticks() + 2000
                         elif target in bulkheads:
                             bulkheads[target].sealed = False
                             command_history.append(f"BULKHEAD {target} OPENED")
@@ -592,8 +594,10 @@ def run_airlock_puzzle(player_name):
             alien.update(all_navigation_nodes, bulkheads, player_pos)
             if alien.current_node.name == 'bridge':
                 game_over = True
+                win_timer = pygame.time.get_ticks() + 2000
         
-        if game_won and pygame.time.get_ticks() > win_timer:
+        # Exit when delay expires instead of showing message on screen
+        if (game_won or game_over) and pygame.time.get_ticks() > win_timer:
             running = False
         
         if message_timer and pygame.time.get_ticks() > message_timer:
@@ -681,13 +685,11 @@ def run_airlock_puzzle(player_name):
         for i, line in enumerate(help_lines):
             screen.blit(font_small.render(line, True, TERMINAL_GREEN), (ui_x, HEIGHT - 240 + i * 20))
         
-        if game_won:
-            text = font_large.render('AIRLOCK OPENED', True, TERMINAL_GREEN)
-            screen.blit(text, text.get_rect(center=(WIDTH//2, HEIGHT//2)))
-        if game_over:
-            text = font_large.render('LIFE SIGNS NEGATIVE', True, TERMINAL_GREEN)
-            screen.blit(text, text.get_rect(center=(WIDTH//2, HEIGHT//2)))
+        # Removed on-screen victory/failure messages - they'll be shown in narrative.py instead
         
         apply_crt_effects(screen)
         pygame.display.flip()
         clock.tick(60)
+    
+    # Return the outcome instead of displaying it
+    return "victory" if game_won else "failure"
