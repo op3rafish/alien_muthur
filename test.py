@@ -10,7 +10,7 @@ from engine import TypingText, apply_crt_effects, green_flash, wait_for_time, di
 from scenes.dialogue import OPENING_DIALOGUE, MAZE_DIALOGUE
 
 from scenes.maze import run_maze_game
-from scenes.narrative import run_maze_completion, run_airlock_ending
+from scenes.narrative import run_maze_completion, run_navigation_dialogue, run_airlock_intro, run_airlock_ending
 from scenes.airlock import run_airlock_puzzle
 
 def main():
@@ -19,7 +19,10 @@ def main():
     pygame.display.set_caption("Test - Airlock Puzzle + Endings")
 
     player_name = "Lambert"
-    
+    run_navigation_dialogue(screen, player_name)
+
+    run_airlock_intro(screen)
+
     # Run the airlock puzzle
     outcome = run_airlock_puzzle(player_name)
     

@@ -11,7 +11,7 @@ import sys
 import time
 from config import WIDTH, HEIGHT, TERMINAL_GREEN, BRIGHT_GREEN, TERMINAL_BLACK, load_fonts
 from engine import TypingText, apply_crt_effects, green_flash, wait_for_time, display_typing_sequence
-from scenes.dialogue import OPENING_DIALOGUE, MAZE_DIALOGUE, AIRLOCK_DIALOGUE
+from scenes.dialogue import OPENING_DIALOGUE, MAZE_DIALOGUE, NAVIGATION_DIALOGUE, AIRLOCK_DIALOGUE
 
 
 def get_player_name(screen, y_position=100):
@@ -215,6 +215,34 @@ def run_maze_completion(screen, player_name):
     wait_for_time(4, screen, texts2)
     green_flash(screen)
 
+
+def run_navigation_dialogue(screen, player_name):
+    font_large, _, _ = load_fonts()
+    TOP_POSITION = 100
+
+    # Part 1
+    part1_lines = [line.format(player_name=player_name) for line in NAVIGATION_DIALOGUE["nav_dialogue_1"]]
+    screen.fill(TERMINAL_BLACK)
+    texts1 = display_typing_sequence(
+        [(line, font_large) for line in part1_lines],
+        screen,
+        TOP_POSITION,
+        40
+    )
+    wait_for_time(3, screen, texts1)
+    green_flash(screen)
+
+    # New screen for the warning
+    screen.fill(TERMINAL_BLACK)
+    part2_lines = [line.format(player_name=player_name) for line in NAVIGATION_DIALOGUE["nav_dialogue_2"]]
+    texts2 = display_typing_sequence(
+        [(line, font_large) for line in part2_lines],
+        screen,
+        TOP_POSITION,
+        40
+    )
+    wait_for_time(4, screen, texts2)
+    green_flash(screen)
 
 def run_airlock_intro(screen):
     """Display airlock puzzle introduction"""

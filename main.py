@@ -5,7 +5,7 @@ ALIEN: CHRONOS - Main launcher
 import pygame
 from config import WIDTH, HEIGHT
 from scenes.title import run_title_sequence
-from scenes.narrative import run_opening, run_maze_completion, run_airlock_intro, run_airlock_ending
+from scenes.narrative import run_opening, run_maze_completion, run_navigation_dialogue, run_airlock_intro, run_airlock_ending
 from scenes.maze import run_maze_game
 from scenes.airlock import run_airlock_puzzle
 
@@ -30,6 +30,9 @@ def main():
     # Maze completion narrative
     run_maze_completion(screen, player_name)
     
+    # Run navigation dialogue
+    run_navigation_dialogue(screen, player_name)
+
     # Airlock puzzle introduction
     run_airlock_intro(screen)
     

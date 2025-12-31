@@ -78,17 +78,32 @@ MAZE_DIALOGUE = {
         "Proceed with extreme caution, Officer {player_name}",
         " "
     ]
-    }
+}
 
-# NAVIGATION DIALOGUE GOES HERE
+NAVIGATION_DIALOGUE = {
+    "nav_dialogue_1": [
+        "Re-routing ship to emergency co-ordinates, stand by.",
+        "Calculating...",
+        "",
+        ""
+    ],
+    "nav_dialogue_2": [
+        "New destination: LV-642, Cassandra System, Frontier Zone",
+        "Inputting star map co-ordinates now...",
+        "",
+        "New course: Confirmed.",
+        ""
+
+    ]
+}
 
 AIRLOCK_DIALOGUE = {
     "airlock_intro": [
         "WARNING: Unidentified life-form approaching bridge",
         "",
         "MANUAL OVERRIDE INITIATED",
-        "Objective: Lure target to cargo bay."
-        "Airlock can only be opened once cargo bay is sealed.",
+        "Objective: Lure target to cargo bay.",
+        "Airlock can only be opened once cargo bay is sealed",
         "Method: Manual bulkhead control",
         "",
         "Accessing MUTHER airlock protocol interface..."
