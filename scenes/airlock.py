@@ -3,7 +3,8 @@ ALIEN CHRONOS: FINAL AIRLOCK PUZZLE
 """
 
 """
-Edits made and it looks fantastic. Save and move on for now. 
+Alien now fades in and out to make the game harder!
+Looks fantastic.
 """
 import pygame
 import sys
