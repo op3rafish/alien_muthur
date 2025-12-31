@@ -80,6 +80,8 @@ MAZE_DIALOGUE = {
     ]
     }
 
+# NAVIGATION DIALOGUE GOES HERE
+
 AIRLOCK_DIALOGUE = {
     "airlock_intro": [
         "WARNING: Unidentified life-form approaching bridge",
