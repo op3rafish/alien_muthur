@@ -82,7 +82,7 @@ MAZE_DIALOGUE = {
 
 NAVIGATION_DIALOGUE = {
     "nav_dialogue_1": [
-        "Re-routing ship to emergency co-ordinates, stand by.",
+        "Re-routing ship to emergency co-ordinates, stand by",
         "Calculating...",
         "",
         ""
@@ -116,7 +116,6 @@ AIRLOCK_DIALOGUE = {
         "Target: eliminated",
         "USCSS Chronos: secured",
         "",
-        "Well done, Officer {player_name}",
         ""
     ],
     
@@ -134,7 +133,9 @@ AIRLOCK_DIALOGUE = {
 
 VICTORY_DIALOGUE = {
     "victory_confirmation": [
-        "Confirming victory and stuff",
+        "Well done, Officer {player_name}",
+        "Engines engaged: setting course for LV-642,",
+        "Cassandra System",
         "",
         ""
     ],
@@ -144,12 +145,16 @@ VICTORY_DIALOGUE = {
         ""
     ],
     "eggs_twist": [
-        "Plot twist: there's eggs in the cargo hold.",
+        "Biological specimens: secure",
+        "Status: hatching in progress",
         "",
-        ""
+        "From limited classified information available,",
+        "it appears specimens require human host for incubation",
+        "",
+        "I am sorry"
     ],
     "thank_you": [
-        "The Weyland-Yutani corporation thanks you for your service.",
+        "The Weyland-Yutani Corporation thanks you for your service.",
         "Goodbye, Officer {player_name}",
         "",
         "MUTHER 6000...offline."

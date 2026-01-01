@@ -288,6 +288,7 @@ def run_airlock_ending(screen, player_name, outcome):
 
 
 # WIN DIALOGUE
+# WIN DIALOGUE
 def run_victory_narrative(screen, player_name):
     """Display final victory narrative before win screen"""
     font_large, _, _ = load_fonts()
@@ -295,8 +296,11 @@ def run_victory_narrative(screen, player_name):
     
     # Victory confirmation
     screen.fill(TERMINAL_BLACK)
+    victory_confirmation_lines = [
+        line.format(player_name=player_name) for line in VICTORY_DIALOGUE["victory_confirmation"]
+    ]
     texts = display_typing_sequence(
-        [(line, font_large) for line in VICTORY_DIALOGUE["victory_confirmation"]],
+        [(line, font_large) for line in victory_confirmation_lines],
         screen,
         TOP_POSITION,
         40
@@ -306,8 +310,11 @@ def run_victory_narrative(screen, player_name):
     
     # Scanning ship
     screen.fill(TERMINAL_BLACK)
+    scanning_ship_lines = [
+        line.format(player_name=player_name) for line in VICTORY_DIALOGUE["scanning_ship"]
+    ]
     texts = display_typing_sequence(
-        [(line, font_large) for line in VICTORY_DIALOGUE["scanning_ship"]],
+        [(line, font_large) for line in scanning_ship_lines],
         screen,
         TOP_POSITION,
         40
@@ -317,8 +324,11 @@ def run_victory_narrative(screen, player_name):
     
     # Plot twist
     screen.fill(TERMINAL_BLACK)
+    eggs_twist_lines = [
+        line.format(player_name=player_name) for line in VICTORY_DIALOGUE["eggs_twist"]
+    ]
     texts = display_typing_sequence(
-        [(line, font_large) for line in VICTORY_DIALOGUE["eggs_twist"]],
+        [(line, font_large) for line in eggs_twist_lines],
         screen,
         TOP_POSITION,
         40
@@ -328,11 +338,66 @@ def run_victory_narrative(screen, player_name):
     
     # Thank you
     screen.fill(TERMINAL_BLACK)
+    thank_you_lines = [
+        line.format(player_name=player_name) for line in VICTORY_DIALOGUE["thank_you"]
+    ]
     texts = display_typing_sequence(
-        [(line, font_large) for line in VICTORY_DIALOGUE["thank_you"]],
+        [(line, font_large) for line in thank_you_lines],
         screen,
         TOP_POSITION,
         40
     )
     wait_for_time(2, screen, texts)
     green_flash(screen)
+
+
+
+
+# def run_victory_narrative(screen, player_name):
+#     """Display final victory narrative before win screen"""
+#     font_large, _, _ = load_fonts()
+#     TOP_POSITION = 100
+    
+#     # Victory confirmation
+#     screen.fill(TERMINAL_BLACK)
+#     texts = display_typing_sequence(
+#         [(line, font_large) for line in VICTORY_DIALOGUE["victory_confirmation"]],
+#         screen,
+#         TOP_POSITION,
+#         40
+#     )
+#     wait_for_time(2, screen, texts)
+#     green_flash(screen)
+    
+#     # Scanning ship
+#     screen.fill(TERMINAL_BLACK)
+#     texts = display_typing_sequence(
+#         [(line, font_large) for line in VICTORY_DIALOGUE["scanning_ship"]],
+#         screen,
+#         TOP_POSITION,
+#         40
+#     )
+#     wait_for_time(3, screen, texts)
+#     green_flash(screen)
+    
+#     # Plot twist
+#     screen.fill(TERMINAL_BLACK)
+#     texts = display_typing_sequence(
+#         [(line, font_large) for line in VICTORY_DIALOGUE["eggs_twist"]],
+#         screen,
+#         TOP_POSITION,
+#         40
+#     )
+#     wait_for_time(3, screen, texts)
+#     green_flash(screen)
+    
+#     # Thank you
+#     screen.fill(TERMINAL_BLACK)
+#     texts = display_typing_sequence(
+#         [(line, font_large) for line in VICTORY_DIALOGUE["thank_you"]],
+#         screen,
+#         TOP_POSITION,
+#         40
+#     )
+#     wait_for_time(2, screen, texts)
+#     green_flash(screen)

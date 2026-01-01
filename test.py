@@ -18,14 +18,16 @@ def main():
     screen = pygame.display.set_mode((WIDTH, HEIGHT))
     pygame.display.set_caption("Test - Airlock Puzzle + Endings")
 
-    player_name = "Lambert"
+    player_name = "Jackson"
+
     # run_navigation_dialogue(screen, player_name)
 
-    run_airlock_intro(screen)
+    # run_airlock_intro(screen)
 
     # Run the airlock puzzle
-    outcome = run_airlock_puzzle(player_name)
+    # outcome = run_airlock_puzzle(player_name)
     
+    outcome = "victory"
     # Display the appropriate ending
     run_airlock_ending(screen, player_name, outcome)
 
