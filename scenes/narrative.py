@@ -11,7 +11,7 @@ import sys
 import time
 from config import WIDTH, HEIGHT, TERMINAL_GREEN, BRIGHT_GREEN, TERMINAL_BLACK, load_fonts
 from engine import TypingText, apply_crt_effects, green_flash, wait_for_time, display_typing_sequence
-from scenes.dialogue import OPENING_DIALOGUE, MAZE_DIALOGUE, NAVIGATION_DIALOGUE, AIRLOCK_DIALOGUE
+from scenes.dialogue import OPENING_DIALOGUE, MAZE_DIALOGUE, NAVIGATION_DIALOGUE, AIRLOCK_DIALOGUE, VICTORY_DIALOGUE
 
 
 def get_player_name(screen, y_position=100):
@@ -261,7 +261,7 @@ def run_airlock_intro(screen):
     green_flash(screen)
 
 def run_airlock_ending(screen, player_name, outcome):
-    """Display the final game ending based on outcome"""
+    """Display the airlock puzzle ending based on outcome"""
     from scenes.dialogue import AIRLOCK_DIALOGUE
     
     font_large, _, _ = load_fonts()
@@ -284,4 +284,55 @@ def run_airlock_ending(screen, player_name, outcome):
         line_pauses={1: 1.5, 4: 1.0}
     )
     wait_for_time(5, screen, texts)
+    green_flash(screen)
+
+
+# WIN DIALOGUE
+def run_victory_narrative(screen, player_name):
+    """Display final victory narrative before win screen"""
+    font_large, _, _ = load_fonts()
+    TOP_POSITION = 100
+    
+    # Victory confirmation
+    screen.fill(TERMINAL_BLACK)
+    texts = display_typing_sequence(
+        [(line, font_large) for line in VICTORY_DIALOGUE["victory_confirmation"]],
+        screen,
+        TOP_POSITION,
+        40
+    )
+    wait_for_time(2, screen, texts)
+    green_flash(screen)
+    
+    # Scanning ship
+    screen.fill(TERMINAL_BLACK)
+    texts = display_typing_sequence(
+        [(line, font_large) for line in VICTORY_DIALOGUE["scanning_ship"]],
+        screen,
+        TOP_POSITION,
+        40
+    )
+    wait_for_time(3, screen, texts)
+    green_flash(screen)
+    
+    # Plot twist
+    screen.fill(TERMINAL_BLACK)
+    texts = display_typing_sequence(
+        [(line, font_large) for line in VICTORY_DIALOGUE["eggs_twist"]],
+        screen,
+        TOP_POSITION,
+        40
+    )
+    wait_for_time(3, screen, texts)
+    green_flash(screen)
+    
+    # Thank you
+    screen.fill(TERMINAL_BLACK)
+    texts = display_typing_sequence(
+        [(line, font_large) for line in VICTORY_DIALOGUE["thank_you"]],
+        screen,
+        TOP_POSITION,
+        40
+    )
+    wait_for_time(2, screen, texts)
     green_flash(screen)

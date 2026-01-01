@@ -114,9 +114,9 @@ AIRLOCK_DIALOGUE = {
         "DECOMPRESSION COMPLETE",
         "",
         "Target: eliminated",
-        "Hull integrity restored",
+        "USCSS Chronos: secured",
         "",
-        "Mission successful, Officer {player_name}",
+        "Well done, Officer {player_name}",
         ""
     ],
     
@@ -130,6 +130,31 @@ AIRLOCK_DIALOGUE = {
         "USCSS Chronos...Lost",
         ""
     ]
+}
+
+VICTORY_DIALOGUE = {
+    "victory_confirmation": [
+        "Confirming victory and stuff",
+        "",
+        ""
+    ],
+    "scanning_ship": [
+        "Scanning ship...",
+        "",
+        ""
+    ],
+    "eggs_twist": [
+        "Plot twist: there's eggs in the cargo hold.",
+        "",
+        ""
+    ],
+    "thank_you": [
+        "The Weyland-Yutani corporation thanks you for your service.",
+        "Goodbye, Officer {player_name}",
+        "",
+        "MUTHER 6000...offline."
+    ],
+
 }
     
 #     "final_message": [

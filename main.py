@@ -5,7 +5,7 @@ ALIEN: CHRONOS - Main launcher
 import pygame
 from config import WIDTH, HEIGHT
 from scenes.title import run_title_sequence
-from scenes.narrative import run_opening, run_maze_completion, run_navigation_dialogue, run_airlock_intro, run_airlock_ending
+from scenes.narrative import run_opening, run_maze_completion, run_navigation_dialogue, run_airlock_intro, run_airlock_ending, run_victory_narrative
 from scenes.maze import run_maze_game
 from scenes.airlock import run_airlock_puzzle
 
@@ -42,6 +42,12 @@ def main():
     # Display airlock ending based on outcome
     run_airlock_ending(screen, player_name, outcome)
     
+    # If player wins airlock, show "victory" dialogue
+    if outcome == "victory":
+        run_victory_narrative(screen, player_name)
+
+
+
     # Close game
     pygame.quit()
 
