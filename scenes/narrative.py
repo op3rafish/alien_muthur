@@ -12,7 +12,7 @@ import time
 from config import WIDTH, HEIGHT, TERMINAL_GREEN, BRIGHT_GREEN, TERMINAL_BLACK, load_fonts
 from engine import TypingText, apply_crt_effects, green_flash, wait_for_time, display_typing_sequence
 from scenes.dialogue import OPENING_DIALOGUE, MAZE_DIALOGUE, NAVIGATION_DIALOGUE, AIRLOCK_DIALOGUE, VICTORY_DIALOGUE
-
+from scenes.win import run_shutdown_sequence
 
 def get_player_name(screen, y_position=100):
     """Get player name input"""
@@ -349,6 +349,9 @@ def run_victory_narrative(screen, player_name):
     )
     wait_for_time(2, screen, texts)
     green_flash(screen)
+
+    # Run shutdown sequence
+    run_shutdown_sequence(screen)
 
 
 

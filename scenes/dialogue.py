@@ -25,7 +25,7 @@ OPENING_DIALOGUE = {
     },
     
     "player_match": [
-        "Accessing Weyland-Yutani personnel database...",
+        "Accessing Weyland-Yutani active personnel database...",
         "",
         "Match detected",
         "",
@@ -61,22 +61,23 @@ OPENING_DIALOGUE = {
 
 MAZE_DIALOGUE = {
     "timer_mazeintro": [
-        "Crew member Jones...terminated.",
+        "Crew member Jameson...terminated.",
+        "",
         "You must manually re-route power, coolant and data systems",
         "Establishing interface..."
         ""
     ],
     "maze_completion_1": [
         "SYSTEMS RE-ROUTED SUCCESSFULLY",
-        "Power...Online",
-        "Coolant...Online",
-        "Data...Online"
+        "Power systems...Online",
+        "Coolant systems...Online",
+        "Data systems...Online"
         ""
     ],
     "maze_completion_2": [
         "WARNING: Unidentified life-form movement detected",
-        "Proceed with extreme caution, Officer {player_name}",
-        " "
+        "",
+        "Crew member Rodriguez...terminated."
     ]
 }
 
@@ -92,14 +93,15 @@ NAVIGATION_DIALOGUE = {
         "Inputting star map co-ordinates now...",
         "",
         "New course: Confirmed.",
-        ""
-
+        "",
+        "Crew member Barratt...terminated."
     ]
 }
 
 AIRLOCK_DIALOGUE = {
     "airlock_intro": [
         "WARNING: Unidentified life-form approaching bridge",
+        "Crew member Jenkins...terminated."
         "",
         "MANUAL OVERRIDE INITIATED",
         "Objective: Lure target to cargo bay.",
@@ -157,6 +159,7 @@ VICTORY_DIALOGUE = {
         "The Weyland-Yutani Corporation thanks you for your service.",
         "Goodbye, Officer {player_name}",
         "",
+        "Special order 937...fulfilled.",
         "MUTHER 6000...offline."
     ],
 
