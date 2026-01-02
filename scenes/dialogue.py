@@ -15,7 +15,7 @@ OPENING_DIALOGUE = {
         "Ship name: USCSS Chronos",
         "Class: Commercial Freighter",
         "Crew: 5",
-        "Owner: Weyland-Yutani Corp",
+        "Owner: Weyland-Yutani Corporation",
         "Course: Returning to Earth"
     ],
     
@@ -89,7 +89,8 @@ NAVIGATION_DIALOGUE = {
         ""
     ],
     "nav_dialogue_2": [
-        "New destination: LV-642, Cassandra System, Frontier Zone",
+        "New destination: Weyland-Yutani Research Facility",
+        "LV-642, Cassandra System, Frontier Zone",
         "Inputting star map co-ordinates now...",
         "",
         "New course: Confirmed.",
@@ -103,12 +104,13 @@ AIRLOCK_DIALOGUE = {
         "WARNING: Unidentified life-form approaching bridge",
         "Crew member Jenkins...terminated."
         "",
-        "MANUAL OVERRIDE INITIATED",
         "Objective: Lure target to cargo bay.",
         "Airlock can only be opened once cargo bay is sealed",
         "Method: Manual bulkhead control",
+        "Seal B1 and B4 IMMEDIATELY to ensure survival."
         "",
-        "Accessing MUTHER airlock protocol interface..."
+        "MANUAL OVERRIDE INITIATED",
+        "Accessing airlock protocol interface..."
     ],
     
     "airlock_victory": [
@@ -127,7 +129,6 @@ AIRLOCK_DIALOGUE = {
         "",
         "Special Order 937...Failed",
         "",
-        "Mission parameters not met",
         "USCSS Chronos...Lost",
         ""
     ]
