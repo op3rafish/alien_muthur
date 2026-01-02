@@ -51,7 +51,8 @@ OPENING_DIALOGUE = {
 
     "order_937": [
         "Special order 937...active",
-        "New primary priority: Officer {player_name} must survive",
+        "New primary priority:",
+        "Officer {player_name} must survive",
         "",
         "",
         "Remaining crew...Expendible",
@@ -61,7 +62,7 @@ OPENING_DIALOGUE = {
 
 MAZE_DIALOGUE = {
     "timer_mazeintro": [
-        "Crew member Jameson...terminated.",
+        "Crew member Jameson...terminated",
         "",
         "You must manually re-route power, coolant and data systems",
         "Establishing interface..."
@@ -77,7 +78,7 @@ MAZE_DIALOGUE = {
     "maze_completion_2": [
         "WARNING: Unidentified life-form movement detected",
         "",
-        "Crew member Rodriguez...terminated."
+        "Crew member Rodriguez...terminated"
     ]
 }
 
@@ -95,19 +96,19 @@ NAVIGATION_DIALOGUE = {
         "",
         "New course: Confirmed.",
         "",
-        "Crew member Barratt...terminated."
+        "Crew member Barratt...terminated"
     ]
 }
 
 AIRLOCK_DIALOGUE = {
     "airlock_intro": [
         "WARNING: Unidentified life-form approaching bridge",
-        "Crew member Jenkins...terminated."
+        "Crew member Jenkins...terminated",
         "",
-        "Objective: Lure target to cargo bay.",
+        "Objective: Lure target to cargo bay",
         "Airlock can only be opened once cargo bay is sealed",
         "Method: Manual bulkhead control",
-        "Seal B1 and B4 IMMEDIATELY to ensure survival."
+        "Seal B1 and B4 IMMEDIATELY to ensure survival",
         "",
         "MANUAL OVERRIDE INITIATED",
         "Accessing airlock protocol interface..."
@@ -125,7 +126,7 @@ AIRLOCK_DIALOGUE = {
     
     "airlock_failure": [
         "LIFE SIGNS NEGATIVE",
-        "Officer {player_name}...Terminated",
+        "Officer {player_name}...terminated",
         "",
         "Special Order 937...Failed",
         "",
@@ -157,11 +158,14 @@ VICTORY_DIALOGUE = {
         "I am sorry"
     ],
     "thank_you": [
-        "The Weyland-Yutani Corporation thanks you for your service.",
+        "The Weyland-Yutani Corporation",
+        "thanks you for your service",
+        "",
         "Goodbye, Officer {player_name}",
         "",
         "Special order 937...fulfilled.",
-        "MUTHER 6000...offline."
+        "MUTHER 6000 offline.",
+        ""
     ],
 
 }
