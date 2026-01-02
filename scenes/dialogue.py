@@ -21,7 +21,7 @@ OPENING_DIALOGUE = {
     
     "player_input": {
         "prompt": "Please enter your full name:",
-        "error": "Does not compute. Please enter a valid full name."
+        "error": "Does not compute, please enter a valid full name"
     },
     
     "player_match": [
@@ -41,11 +41,11 @@ OPENING_DIALOGUE = {
         "THREAT LEVEL: CRITICAL",
         "",
         "*** EMERGENCY QUARANTINE PROTOCOL ACTIVATED ***",
+        "",
         "Locking down ship",
         "Power systems...Offline",
         "Coolant systems...Offline",
         "Data systems...Offline",
-        "",
         ""
     ],
 
@@ -64,8 +64,10 @@ MAZE_DIALOGUE = {
     "timer_mazeintro": [
         "Crew member Jameson...terminated",
         "",
+        "Ship systems have sustained heavy damage",
         "You must manually re-route power, coolant and data systems",
-        "Establishing interface..."
+        ""
+        "Establishing manual override interface..."
         ""
     ],
     "maze_completion_1": [
@@ -94,7 +96,7 @@ NAVIGATION_DIALOGUE = {
         "LV-642, Cassandra System, Frontier Zone",
         "Inputting star map co-ordinates now...",
         "",
-        "New course: Confirmed.",
+        "New course: Confirmed",
         "",
         "Crew member Barratt...terminated"
     ]
@@ -163,8 +165,9 @@ VICTORY_DIALOGUE = {
         "",
         "Goodbye, Officer {player_name}",
         "",
-        "Special order 937...fulfilled.",
-        "MUTHER 6000 offline.",
+        "Special order 937...fulfilled",
+        "",
+        "MUTHER 6000 offline",
         ""
     ],
 
