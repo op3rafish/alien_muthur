@@ -5,9 +5,11 @@ ALIEN: CHRONOS - Main launcher
 import pygame
 from config import WIDTH, HEIGHT
 from scenes.title import run_title_sequence
-from scenes.narrative import run_opening, run_maze_completion, run_navigation_dialogue, run_airlock_intro, run_airlock_ending, run_victory_narrative
+from scenes.narrative import (run_opening, run_maze_completion, run_navigation_dialogue,
+                              run_airlock_intro, run_airlock_ending, run_victory_narrative)
 from scenes.maze import run_maze_game
 from scenes.airlock import run_airlock_puzzle
+from scenes.credits import run_credits_screen
 
 def main():
     """Initialize game and run sequences"""
@@ -46,7 +48,8 @@ def main():
     if outcome == "victory":
         run_victory_narrative(screen, player_name)
 
-
+    # Show credits screen (regardless of outcome)
+    return run_credits_screen()
 
     # Close game
     pygame.quit()
