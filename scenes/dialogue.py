@@ -5,7 +5,7 @@ Contains only text content - no game configuration
 
 # Opening sequence dialogue
 OPENING_DIALOGUE = {
-    "initialization": "MU-TH-UR 6000 initializing",
+    "initialization": "MU/TH/UR 6000 initializing",
     
     "diagnostics": "Running diagnostics...",
     
@@ -167,7 +167,7 @@ VICTORY_DIALOGUE = {
         "",
         "Special order 937...fulfilled",
         "",
-        "MUTHER 6000 offline",
+        "MU/TH/UR 6000 offline",
         ""
     ],
 
