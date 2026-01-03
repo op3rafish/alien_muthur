@@ -33,15 +33,12 @@ def run_credits_screen():
         ("created by Dan O'Bannon & Ronald Shusett", font_small, TERMINAL_GREEN, 480),
         ("", font_small, TERMINAL_GREEN, 510),
         ("", font_small, TERMINAL_GREEN, 540),
-]
-
-
-
+    ]
 
     controls_lines = [
         (" ", font_small, TERMINAL_GREEN, 450),
         (" ", font_small, TERMINAL_GREEN, 450),
-        ("Press R to Replay", font_medium, TERMINAL_GREEN, HEIGHT - 80),
+        ("Press R to replay final puzzle", font_medium, TERMINAL_GREEN, HEIGHT - 80),
         ("Press ESC to Quit", font_medium, TERMINAL_GREEN, HEIGHT - 50),
     ]
     
