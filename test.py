@@ -25,9 +25,8 @@ def main():
     # run_airlock_intro(screen)
 
     # Run the airlock puzzle
-    # outcome = run_airlock_puzzle(player_name)
+    outcome = run_airlock_puzzle(player_name)
     
-    outcome = "victory"
     # Display the appropriate ending
     run_airlock_ending(screen, player_name, outcome)
 
