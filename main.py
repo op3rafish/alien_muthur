@@ -11,7 +11,7 @@ from scenes.maze import run_maze_game
 from scenes.airlock import run_airlock_puzzle
 from scenes.credits import run_credits_screen
 
-def main():
+def run_game():
     """Initialize game and run sequences"""
     # Initialize Pygame
     pygame.init()
@@ -60,7 +60,7 @@ def main():
             continue  # Restart the game
         else:
             break  # Exit
-        
+
     # Close game
     pygame.quit()
 
