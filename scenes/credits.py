@@ -16,25 +16,28 @@ def run_credits_screen():
     font_large, font_medium, font_small = load_fonts()
     clock = pygame.time.Clock()
     
-# Credits content - customize this with your details
+# Credits content
     credits_lines = [
-    ("ALIEN: CHRONOS[]", font_large, TERMINAL_GREEN, 80),
-    ("", font_small, TERMINAL_GREEN, 120),
-    ("Thank you for playing", font_medium, TERMINAL_GREEN, 160),
-    ("", font_small, TERMINAL_GREEN, 200),
-    ("Created by: Mark Bonington", font_small, TERMINAL_GREEN, 240),
-    ("", font_small, TERMINAL_GREEN, 260),
-    ("Connect with me on LinkedIn:", font_small, TERMINAL_GREEN, 300),
-    ("linkedin.com/in/mark-bonington", font_small, BRIGHT_GREEN, 330),
-    ("", font_small, TERMINAL_GREEN, 360),
-    ("Built with Python & Pygame", font_small, TERMINAL_GREEN, 390),
-    ("Font: VT323 by Peter Hull", font_small, TERMINAL_GREEN, 420),
-    ("", font_small, TERMINAL_GREEN, 450),
-    ("Inspired by the ALIEN franchise,", font_small, TERMINAL_GREEN, 480),
-    ("created by Dan O'Bannon & Ronald Shusett", font_small, TERMINAL_GREEN, 510),
-    ("", font_small, TERMINAL_GREEN, 540),
-    ("", font_small, TERMINAL_GREEN, 570),
+        ("ALIEN: CHRONOS", font_large, TERMINAL_GREEN, 80),
+        ("", font_small, TERMINAL_GREEN, 120),
+        ("Thank you for playing", font_medium, TERMINAL_GREEN, 160),
+        ("", font_small, TERMINAL_GREEN, 200),
+        ("Created by: Mark Bonington", font_small, TERMINAL_GREEN, 240),
+        ("", font_small, TERMINAL_GREEN, 260),
+        ("Connect with me on LinkedIn:", font_small, TERMINAL_GREEN, 300),
+        ("linkedin.com/in/mark-bonington", font_small, BRIGHT_GREEN, 330),
+        ("", font_small, TERMINAL_GREEN, 360),
+        ("Built with Python & Pygame", font_small, TERMINAL_GREEN, 390),
+        ("Font: VT323 by Peter Hull", font_small, TERMINAL_GREEN, 420),
+        ("Inspired by the ALIEN franchise,", font_small, TERMINAL_GREEN, 450),
+        ("created by Dan O'Bannon & Ronald Shusett", font_small, TERMINAL_GREEN, 480),
+        ("", font_small, TERMINAL_GREEN, 510),
+        ("", font_small, TERMINAL_GREEN, 540),
 ]
+
+
+
+
     controls_lines = [
         (" ", font_small, TERMINAL_GREEN, 450),
         (" ", font_small, TERMINAL_GREEN, 450),
