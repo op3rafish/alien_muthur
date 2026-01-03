@@ -51,6 +51,16 @@ def main():
     # Show credits screen (regardless of outcome)
     return run_credits_screen()
 
+def main():
+    """Main game loop with replay functionality"""
+    while True:
+        result = run_game()
+        
+        if result == "replay":
+            continue  # Restart the game
+        else:
+            break  # Exit
+        
     # Close game
     pygame.quit()
 
