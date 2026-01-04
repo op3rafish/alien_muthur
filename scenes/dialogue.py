@@ -20,7 +20,7 @@ OPENING_DIALOGUE = {
     ],
     
     "player_input": {
-        "prompt": "Please enter your surname:",
+        "prompt": "Please enter your name:",
         "error": "Does not compute, please enter a valid name"
     },
     
