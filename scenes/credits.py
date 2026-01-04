@@ -18,7 +18,7 @@ def run_credits_screen():
     
 # Credits content
     credits_lines = [
-        ("ALIEN: MU.TH.UR", font_large, TERMINAL_GREEN, 80),
+        ("ALIEN: MUTHUR", font_large, TERMINAL_GREEN, 80),
         ("", font_small, TERMINAL_GREEN, 120),
         ("Thank you for playing!", font_medium, TERMINAL_GREEN, 160),
         ("", font_small, TERMINAL_GREEN, 200),
