@@ -11,8 +11,32 @@ from scenes.maze import run_maze_game
 from scenes.airlock import run_airlock_puzzle
 from scenes.credits import run_credits_screen
 
+def run_airlock_section(screen, player_name):
+    """Run airlock puzzle and endings - can be replayed"""
+    while True:
+        # Airlock puzzle introduction
+        run_airlock_intro(screen)
+        
+        # Launch puzzle 2: airlock puzzle
+        outcome = run_airlock_puzzle(player_name)
+        
+        # Display airlock ending based on outcome
+        run_airlock_ending(screen, player_name, outcome)
+        
+        # If player wins airlock, show "victory" dialogue
+        if outcome == "victory":
+            run_victory_narrative(screen, player_name)
+        
+        # Show credits screen (regardless of outcome)
+        result = run_credits_screen()
+        
+        if result == "replay":
+            continue  # Replay airlock section
+        else:
+            break  # Exit to close game
+
 def run_game():
-    """Initialize game and run sequences"""
+    """Run full game sequence"""
     # Initialize Pygame
     pygame.init()
     
@@ -35,32 +59,13 @@ def run_game():
     # Run navigation dialogue
     run_navigation_dialogue(screen, player_name)
 
-    # Airlock puzzle introduction
-    run_airlock_intro(screen)
-    
-    # Launch puzzle 2: airlock puzzle
-    outcome = run_airlock_puzzle(player_name)
-    
-    # Display airlock ending based on outcome
-    run_airlock_ending(screen, player_name, outcome)
-    
-    # If player wins airlock, show "victory" dialogue
-    if outcome == "victory":
-        run_victory_narrative(screen, player_name)
-
-    # Show credits screen (regardless of outcome)
-    return run_credits_screen()
+    # Run airlock section (which can be replayed)
+    run_airlock_section(screen, player_name)
 
 def main():
-    """Main game loop with replay functionality"""
-    while True:
-        result = run_game()
-        
-        if result == "replay":
-            continue  # Restart the game
-        else:
-            break  # Exit
-
+    """Main game loop"""
+    run_game()
+    
     # Close game
     pygame.quit()
 

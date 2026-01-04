@@ -20,7 +20,7 @@ def run_credits_screen():
     credits_lines = [
         ("ALIEN: CHRONOS", font_large, TERMINAL_GREEN, 80),
         ("", font_small, TERMINAL_GREEN, 120),
-        ("Thank you for playing", font_medium, TERMINAL_GREEN, 160),
+        ("Thank you for playing!", font_medium, TERMINAL_GREEN, 160),
         ("", font_small, TERMINAL_GREEN, 200),
         ("Created by: Mark Bonington", font_small, TERMINAL_GREEN, 240),
         ("", font_small, TERMINAL_GREEN, 260),
