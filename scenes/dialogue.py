@@ -1,5 +1,5 @@
 """
-Dialogue and text content for ALIEN: CHRONOS
+Dialogue and text content for ALIEN: MUTHUR
 Contains only text content - no game configuration
 """
 
@@ -12,7 +12,7 @@ OPENING_DIALOGUE = {
     "ship_info": [
         "Location: Deep Space",
         "Ship id: 248-624C",
-        "Ship name: USCSS Chronos",
+        "Ship name: USCSS Rhea",
         "Class: Commercial Freighter",
         "Crew: 5",
         "Owner: Weyland-Yutani Corporation",
@@ -20,11 +20,12 @@ OPENING_DIALOGUE = {
     ],
     
     "player_input": {
-        "prompt": "Please enter your full name:",
-        "error": "Does not compute, please enter a valid full name"
+        "prompt": "Please enter your surname:",
+        "error": "Does not compute, please enter a valid name"
     },
     
     "player_match": [
+        "Please hold still while I scan for DNA match",
         "Accessing Weyland-Yutani active personnel database...",
         "",
         "Match detected",
@@ -78,7 +79,7 @@ MAZE_DIALOGUE = {
         ""
     ],
     "maze_completion_2": [
-        "WARNING: Unidentified life-form movement detected",
+        "Unidentified life-form movement detected",
         "",
         "Crew member Rodriguez...terminated"
     ]
@@ -104,10 +105,9 @@ NAVIGATION_DIALOGUE = {
 
 AIRLOCK_DIALOGUE = {
     "airlock_intro": [
-        "WARNING: Unidentified life-form approaching bridge",
         "Crew member Jenkins...terminated",
         "",
-        "Objective: Lure target to cargo bay",
+        "Objective: Lure unidentified life-form to cargo bay",
         "Airlock can only be opened once cargo bay is sealed",
         "Method: Manual bulkhead control",
         "Seal B1 and B4 IMMEDIATELY to ensure survival",
@@ -121,7 +121,7 @@ AIRLOCK_DIALOGUE = {
         "DECOMPRESSION COMPLETE",
         "",
         "Target: eliminated",
-        "USCSS Chronos: secured",
+        "USCSS Rhea: secured",
         "",
         ""
     ],
@@ -132,7 +132,7 @@ AIRLOCK_DIALOGUE = {
         "",
         "Special Order 937...Failed",
         "",
-        "USCSS Chronos...Lost",
+        "USCSS Rhea...Lost",
         ""
     ]
 }

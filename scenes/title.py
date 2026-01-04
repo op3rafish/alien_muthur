@@ -1,5 +1,5 @@
 """
-Title sequence for ALIEN: CHRONOS
+Title sequence for ALIEN: MUTHUR
 """
 
 import pygame
@@ -213,10 +213,10 @@ def run_title_sequence(screen):
     
     green_flash(screen)
     
-    # Phase 3: "CHRONOS" materializes (2.5 seconds)
+    # Phase 3: "MUTHUR" materializes (2.5 seconds)
     start_time = time.time()
     phase_duration = 2.5
-    chronos_chars = list("CHRONOS")
+    muthur_chars = list("MU.TH.UR")
     revealed_chars = 0
     last_reveal = start_time
     
@@ -232,7 +232,7 @@ def run_title_sequence(screen):
         current_time = time.time()
         
         # Reveal characters progressively
-        if current_time - last_reveal > 0.3 and revealed_chars < len(chronos_chars):
+        if current_time - last_reveal > 0.3 and revealed_chars < len(muthur_chars):
             revealed_chars += 1
             last_reveal = current_time
         
@@ -248,18 +248,18 @@ def run_title_sequence(screen):
         alien_rect = alien_surface.get_rect(center=(WIDTH // 2, HEIGHT // 2 - 50))
         screen.blit(alien_surface, alien_rect)
         
-        # Draw partially revealed "CHRONOS"
-        chronos_text = "".join(chronos_chars[:revealed_chars])
-        if chronos_text:
-            chronos_surface = title_font.render(chronos_text, True, TERMINAL_GREEN)
-            chronos_rect = chronos_surface.get_rect(center=(WIDTH // 2, HEIGHT // 2 + 30))
+        # Draw partially revealed "MUTHUR"
+        muthur_text = "".join(muthur_chars[:revealed_chars])
+        if muthur_text:
+            muthur_surface = title_font.render(muthur_text, True, TERMINAL_GREEN)
+            muthur_rect = muthur_surface.get_rect(center=(WIDTH // 2, HEIGHT // 2 + 30))
             
             # Add glitch to newly appearing letters
-            if revealed_chars < len(chronos_chars) and random.random() < 0.5:
-                draw_glitch_text(screen, chronos_text, chronos_rect.x, chronos_rect.y,
+            if revealed_chars < len(muthur_chars) and random.random() < 0.5:
+                draw_glitch_text(screen, muthur_text, muthur_rect.x, muthur_rect.y,
                                title_font, TERMINAL_GREEN)
             else:
-                screen.blit(chronos_surface, chronos_rect)
+                screen.blit(muthur_surface, muthur_rect)
         
         # Random flicker
         if random.random() < 0.08:
@@ -300,9 +300,9 @@ def run_title_sequence(screen):
         alien_rect = alien_surface.get_rect(center=(WIDTH // 2, HEIGHT // 2 - 50))
         screen.blit(alien_surface, alien_rect)
         
-        chronos_surface = title_font.render("CHRONOS", True, TERMINAL_GREEN)
-        chronos_rect = chronos_surface.get_rect(center=(WIDTH // 2, HEIGHT // 2 + 30))
-        screen.blit(chronos_surface, chronos_rect)
+        muthur_surface = title_font.render("MU.TH.UR", True, TERMINAL_GREEN)
+        muthur_rect = muthur_surface.get_rect(center=(WIDTH // 2, HEIGHT // 2 + 30))
+        screen.blit(muthur_surface, muthur_rect)
         
         # Blinking prompt (only after hold period)
         if show_prompt and int(time.time() * 2) % 2 == 0:

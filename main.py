@@ -1,5 +1,5 @@
 """
-ALIEN: CHRONOS - Main launcher
+ALIEN: MUTHUR - Main launcher
 """
 
 import pygame
@@ -42,7 +42,7 @@ def run_game():
     
     # Create screen
     screen = pygame.display.set_mode((WIDTH, HEIGHT))
-    pygame.display.set_caption("Alien: Chronos")
+    pygame.display.set_caption("Alien: Muthur")
     
     # Run title sequence
     run_title_sequence(screen)

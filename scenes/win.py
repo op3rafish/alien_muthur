@@ -1,5 +1,5 @@
 """
-Shutdown sequence for ALIEN: CHRONOS
+Shutdown sequence for ALIEN: MUTHUR
 """
 
 import pygame

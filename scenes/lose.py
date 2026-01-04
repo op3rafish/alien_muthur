@@ -1,5 +1,5 @@
 """
-Game Over sequence for ALIEN: CHRONOS
+Game Over sequence for ALIEN: MUTHUR
 """
 
 import pygame

@@ -1,5 +1,5 @@
 """
-Maze routing game for ALIEN: CHRONOS
+Maze routing game for ALIEN: MUTHUR
 """
 
 import pygame

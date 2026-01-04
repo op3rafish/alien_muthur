@@ -1,5 +1,5 @@
 """
-Credits and thank you screen for ALIEN: CHRONOS
+Credits and thank you screen for ALIEN: MUTHUR
 """
 
 import pygame
@@ -11,14 +11,14 @@ def run_credits_screen():
     """Display credits screen with option to replay or quit"""
     pygame.init()
     screen = pygame.display.set_mode((WIDTH, HEIGHT))
-    pygame.display.set_caption("ALIEN: CHRONOS - Credits")
+    pygame.display.set_caption("ALIEN: MUTHUR - Credits")
     
     font_large, font_medium, font_small = load_fonts()
     clock = pygame.time.Clock()
     
 # Credits content
     credits_lines = [
-        ("ALIEN: CHRONOS", font_large, TERMINAL_GREEN, 80),
+        ("ALIEN: MU.TH.UR", font_large, TERMINAL_GREEN, 80),
         ("", font_small, TERMINAL_GREEN, 120),
         ("Thank you for playing!", font_medium, TERMINAL_GREEN, 160),
         ("", font_small, TERMINAL_GREEN, 200),
@@ -80,79 +80,3 @@ def run_credits_screen():
         
         pygame.display.flip()
         clock.tick(60)
-
-
-
-
-# """
-# Credits and thank you screen for ALIEN: CHRONOS
-# """
-
-# import pygame
-# import sys
-# from config import WIDTH, HEIGHT, TERMINAL_GREEN, BRIGHT_GREEN, TERMINAL_BLACK, load_fonts
-
-# def run_credits_screen():
-#     """Display credits screen with option to replay or quit"""
-#     pygame.init()
-#     screen = pygame.display.set_mode((WIDTH, HEIGHT))
-#     pygame.display.set_caption("ALIEN: CHRONOS - Credits")
-    
-#     font_large, font_medium, font_small = load_fonts()
-#     clock = pygame.time.Clock()
-    
-#     # Credits content - customize this with your details
-#     credits_lines = [
-#     ("ALIEN: CHRONOS", font_large, TERMINAL_GREEN, 80),
-#     ("", font_small, TERMINAL_GREEN, 120),
-#     ("Thank you for playing", font_medium, TERMINAL_GREEN, 160),
-#     ("", font_small, TERMINAL_GREEN, 200),
-#     ("Created by: [Your Name]", font_small, TERMINAL_GREEN, 240),
-#     ("", font_small, TERMINAL_GREEN, 260),
-#     ("Connect with me on LinkedIn:", font_small, TERMINAL_GREEN, 300),
-#     ("linkedin.com/in/mark-bonington", font_small, BRIGHT_GREEN, 330),
-#     ("", font_small, TERMINAL_GREEN, 360),
-#     ("Built with Python & Pygame", font_small, TERMINAL_GREEN, 390),
-#     ("Font: VT323 by Peter Hull", font_small, TERMINAL_GREEN, 420),
-#     ("", font_small, TERMINAL_GREEN, 450),
-#     ("Inspired by the ALIEN franchise,", font_small, TERMINAL_GREEN, 480),
-#     ("created by Dan O'Bannon & Ronald Shusett", font_small, TERMINAL_GREEN, 510),
-#     ("", font_small, TERMINAL_GREEN, 540),
-#     ("", font_small, TERMINAL_GREEN, 570),
-# ]
-    
-#     controls_lines = [
-#         ("Press R to Replay", font_medium, TERMINAL_GREEN, HEIGHT - 80),
-#         ("Press ESC to Quit", font_medium, TERMINAL_GREEN, HEIGHT - 50),
-#     ]
-    
-#     waiting = True
-#     while waiting:
-#         for event in pygame.event.get():
-#             if event.type == pygame.QUIT:
-#                 pygame.quit()
-#                 sys.exit()
-#             elif event.type == pygame.KEYDOWN:
-#                 if event.key == pygame.K_ESCAPE:
-#                     pygame.quit()
-#                     sys.exit()
-#                 elif event.key == pygame.K_r:
-#                     return "replay"
-        
-#         screen.fill(TERMINAL_BLACK)
-        
-#         # Draw credits
-#         for text, font, color, y_pos in credits_lines:
-#             if text:  # Skip empty lines
-#                 text_surface = font.render(text, True, color)
-#                 text_rect = text_surface.get_rect(center=(WIDTH // 2, y_pos))
-#                 screen.blit(text_surface, text_rect)
-        
-#         # Draw controls
-#         for text, font, color, y_pos in controls_lines:
-#             text_surface = font.render(text, True, color)
-#             text_rect = text_surface.get_rect(center=(WIDTH // 2, y_pos))
-#             screen.blit(text_surface, text_rect)
-        
-#         pygame.display.flip()
-#         clock.tick(60)

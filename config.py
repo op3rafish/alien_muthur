@@ -1,5 +1,5 @@
 """
-Configuration file for ALIEN: CHRONOS
+Configuration file for ALIEN: MUTHUR
 Contains all constants, colors, and font initialization
 """
 

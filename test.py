@@ -1,5 +1,5 @@
 """
-Test environment for ALIEN: CHRONOS
+Test environment for ALIEN: MUTHUR
 """
 
 import pygame

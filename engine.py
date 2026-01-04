@@ -1,5 +1,5 @@
 """
-Shared utilities and effects for ALIEN: CHRONOS
+Shared utilities and effects for ALIEN: MUTHUR
 """
 
 import pygame
