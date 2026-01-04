@@ -1,5 +1,5 @@
 """
-Narrative sequencing for ALIEN: CHRONOS
+Narrative sequencing for ALIEN: MUTHUR
 
 Player enters name
 Tone and stakes are established

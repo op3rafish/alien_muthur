@@ -216,7 +216,7 @@ def run_title_sequence(screen):
     # Phase 3: "MUTHUR" materializes (2.5 seconds)
     start_time = time.time()
     phase_duration = 2.5
-    muthur_chars = list("MU.TH.UR")
+    muthur_chars = list("MUTHUR")
     revealed_chars = 0
     last_reveal = start_time
     
@@ -300,7 +300,7 @@ def run_title_sequence(screen):
         alien_rect = alien_surface.get_rect(center=(WIDTH // 2, HEIGHT // 2 - 50))
         screen.blit(alien_surface, alien_rect)
         
-        muthur_surface = title_font.render("MU.TH.UR", True, TERMINAL_GREEN)
+        muthur_surface = title_font.render("MUTHUR", True, TERMINAL_GREEN)
         muthur_rect = muthur_surface.get_rect(center=(WIDTH // 2, HEIGHT // 2 + 30))
         screen.blit(muthur_surface, muthur_rect)
         
