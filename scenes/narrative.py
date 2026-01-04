@@ -72,7 +72,7 @@ def get_player_name(screen, y_position=100):
         prompt.draw(screen)
         
         # Draw input text
-        input_surface = font_large.render(input_text + "_", True, BRIGHT_GREEN)
+        input_surface = font_large.render(input_text + "_", True, TERMINAL_GREEN)
         screen.blit(input_surface, (50, y_position + 40))
         
         # Draw error if any
