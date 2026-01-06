@@ -15,3 +15,16 @@ maze_completion_test.py
 alien_chronos work doc.rtf
 
 test.py
+
+
+# PyInstaller build files
+build/
+dist/
+*.spec
+*.pyc
+__pycache__/
+*.so
+*.dylib
+*.dll
+*.exe
+*.app
