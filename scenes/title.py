@@ -137,15 +137,24 @@ def boot_sequence(screen):
     # Flash to indicate boot complete
     green_flash(screen)
 
+
 def run_title_sequence(screen):
     """Run the title sequence animation"""
     font_large, font_medium, font_small = load_fonts()
     
     # Create even larger font for title
     try:
-        title_font = pygame.font.Font("assets/VT323-Regular.ttf", 72)
+        from config import get_resource_path
+        title_font_path = get_resource_path("assets/VT323-Regular.ttf")
+        title_font = pygame.font.Font(title_font_path, 72)
     except:
         title_font = pygame.font.Font(None, 72)
+
+
+    # try:
+    #     title_font = pygame.font.Font("assets/VT323-Regular.ttf", 72)
+    # except:
+    #     title_font = pygame.font.Font(None, 72)
     
     clock = pygame.time.Clock()
     
