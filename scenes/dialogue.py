@@ -153,7 +153,7 @@ VICTORY_DIALOGUE = {
     ],
     "eggs_twist": [
         "Biological specimens: Secure",
-        "Status: hatching in progress",
+        "Status: Hatching in progress...",
         "",
         "From limited classified information available,",
         "it appears specimens require human host for incubation",
