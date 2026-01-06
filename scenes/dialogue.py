@@ -108,7 +108,7 @@ AIRLOCK_DIALOGUE = {
     "airlock_intro": [
         "Crew member Jenkins...Terminated",
         "",
-        "Objective: Lure unidentified life-form to cargo bay",
+        "Final objective: Lure unidentified life-form to cargo bay",
         "Airlock can only be opened once cargo bay is sealed",
         "Method: Manual bulkhead control",
         "Seal B1 and B4 IMMEDIATELY to ensure survival",
@@ -140,7 +140,7 @@ AIRLOCK_DIALOGUE = {
 
 VICTORY_DIALOGUE = {
     "victory_confirmation": [
-        "Well done, Officer {player_name}",
+        "Congratulations, Officer {player_name}",
         "Engines engaged: Setting course for LV-642,",
         "Cassandra System",
         "",
