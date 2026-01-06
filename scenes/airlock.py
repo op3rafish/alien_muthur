@@ -524,7 +524,7 @@ def run_airlock_puzzle(player_name):
         waypoint_hypersleep_mid, waypoint_hypersleep_to_reactor
     ]
     
-    alien = Alien(nodes['cargo_center'], nodes['bridge'])
+    alien = Alien(nodes['reactor'], nodes['bridge'])
     
     game_won = game_over = cargo_sealed = False
     command_input = ""

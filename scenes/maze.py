@@ -253,7 +253,7 @@ def run_maze_game(player_name):
     def draw_ui():
         """Draw user interface elements"""
         if game_won:
-            text = font_small.render("ROUTING COMPLETE", True, TERMINAL_GREEN)  # Changed from font_medium
+            text = font_small.render(" ", True, TERMINAL_GREEN)  # Changed from font_medium
             screen.blit(text, text.get_rect(center=(WIDTH // 2, 40)))
             
         else:

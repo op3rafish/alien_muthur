@@ -51,7 +51,7 @@ OPENING_DIALOGUE = {
     ],
 
     "order_937": [
-        "Special order 937...active",
+        "Special order 937...Active",
         "New primary priority:",
         "Officer {player_name} must survive",
         "",
@@ -63,16 +63,17 @@ OPENING_DIALOGUE = {
 
 MAZE_DIALOGUE = {
     "timer_mazeintro": [
-        "Crew member Jameson...terminated",
+        "Crew member Jameson...Terminated",
         "",
-        "Ship systems have sustained heavy damage",
-        "You must manually re-route power, coolant and data systems",
-        ""
-        "Establishing manual override interface..."
+        "Core systems damaged during breach of ship",
+        "You must manually re-route power, coolant and data",
+        "This will allow ship re-navigation protocol",
+        "Establishing manual override interface now..."
         ""
     ],
     "maze_completion_1": [
         "SYSTEMS RE-ROUTED SUCCESSFULLY",
+        "",
         "Power systems...Online",
         "Coolant systems...Online",
         "Data systems...Online"
@@ -81,7 +82,7 @@ MAZE_DIALOGUE = {
     "maze_completion_2": [
         "Unidentified life-form movement detected",
         "",
-        "Crew member Rodriguez...terminated"
+        "Crew member Rodriguez...Terminated"
     ]
 }
 
@@ -99,13 +100,13 @@ NAVIGATION_DIALOGUE = {
         "",
         "New course: Confirmed",
         "",
-        "Crew member Barratt...terminated"
+        "Crew member Barratt...Terminated"
     ]
 }
 
 AIRLOCK_DIALOGUE = {
     "airlock_intro": [
-        "Crew member Jenkins...terminated",
+        "Crew member Jenkins...Terminated",
         "",
         "Objective: Lure unidentified life-form to cargo bay",
         "Airlock can only be opened once cargo bay is sealed",
@@ -120,15 +121,15 @@ AIRLOCK_DIALOGUE = {
         "AIRLOCK OPENED",
         "DECOMPRESSION COMPLETE",
         "",
-        "Target: eliminated",
-        "USCSS Rhea: secured",
+        "THREAT: NEUTRALIZED",
+        "USCSS Rhea: Secured",
         "",
         ""
     ],
     
     "airlock_failure": [
         "LIFE SIGNS NEGATIVE",
-        "Officer {player_name}...terminated",
+        "Officer {player_name}...Terminated",
         "",
         "Special Order 937...Failed",
         "",
@@ -140,7 +141,7 @@ AIRLOCK_DIALOGUE = {
 VICTORY_DIALOGUE = {
     "victory_confirmation": [
         "Well done, Officer {player_name}",
-        "Engines engaged: setting course for LV-642,",
+        "Engines engaged: Setting course for LV-642,",
         "Cassandra System",
         "",
         ""
@@ -151,7 +152,7 @@ VICTORY_DIALOGUE = {
         ""
     ],
     "eggs_twist": [
-        "Biological specimens: secure",
+        "Biological specimens: Secure",
         "Status: hatching in progress",
         "",
         "From limited classified information available,",
@@ -160,14 +161,13 @@ VICTORY_DIALOGUE = {
         "I am sorry"
     ],
     "thank_you": [
-        "The Weyland-Yutani Corporation",
-        "thanks you for your service",
+        "The Weyland-Yutani Corporation thanks you for your service",
         "",
         "Goodbye, Officer {player_name}",
         "",
-        "Special order 937...fulfilled",
+        "Special order 937...Fulfilled",
         "",
-        "MU/TH/UR 6000 offline",
+        "MU/TH/UR 6000 going offline...",
         ""
     ],
 
