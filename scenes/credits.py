@@ -25,7 +25,7 @@ def run_credits_screen():
         ("Created by: Mark Bonington", font_small, TERMINAL_GREEN, 240),
         ("", font_small, TERMINAL_GREEN, 260),
         ("Connect with me on LinkedIn:", font_small, TERMINAL_GREEN, 300),
-        ("linkedin.com/in/mark-bonington", font_small, BRIGHT_GREEN, 330),
+        ("linkedin.com/mark-bonington", font_small, BRIGHT_GREEN, 330),
         ("", font_small, TERMINAL_GREEN, 360),
         ("Built with Python & Pygame", font_small, TERMINAL_GREEN, 390),
         ("Font: VT323 by Peter Hull", font_small, TERMINAL_GREEN, 420),
