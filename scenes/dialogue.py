@@ -56,7 +56,7 @@ OPENING_DIALOGUE = {
         "Officer {player_name} must survive",
         "",
         "",
-        "Remaining crew...Expendible",
+        "Remaining crew...Expendable",
         ""
     ]
 }
